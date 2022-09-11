@@ -19,3 +19,21 @@ body {
     #434343 360deg
   );
 }
+
+.header {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
