@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #434343 0deg,
+    #434343 0.04deg,
+    #254242 178.12deg,
+    #000000 359.89deg,
+    rgba(9, 9, 9, 0.524053) 359.93deg,
+    rgba(0, 0, 0, 0.468363) 359.96deg,
+    #434343 360deg
+  );
+}
