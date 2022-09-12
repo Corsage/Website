@@ -35,7 +35,6 @@ const Footer = () => {
 
     const updateBufferGeometry = () => {
       const positions = geometry.current.attributes.position.array;
-
       // planeGeo.vertices[i].z = Math.sin(( i + count * 0.00002)) * (planeGeo.vertices[i]._myZ - (planeGeo.vertices[i]._myZ* 0.6))
 
       /*
@@ -73,9 +72,10 @@ const Footer = () => {
       }
 
       // Clone it for use.
-      setVertices(positions);
+      // setVertices(positions);
 
-      // geometry.current.verticesNeedUpate = true;
+      geometry.current.verticesNeedUpate = true;
+      console.log('worked!');
     });
 
     return (
@@ -87,7 +87,7 @@ const Footer = () => {
           onPointerOver={(e) => setHover(true)}
           onPointerOut={(e) => setHover(false)}
         >
-          <planeGeometry
+          <planeBufferGeometry
             ref={geometry}
             attach="geometry"
             args={[
