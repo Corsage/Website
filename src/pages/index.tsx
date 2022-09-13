@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <div
       style={styles.container}
-      className="flex h-fit flex-col items-center justify-center m-auto"
+      className="flex h-fit flex-col self-center items-center justify-center m-auto"
     >
       <div className="mb-5">
         <Logo className="home-logo p-5" />
