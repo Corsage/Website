@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  min-height: 100%;
-}
-
+/** General styles - used throughout the site. */
 body {
   background: conic-gradient(
     from 180deg at 50% 50%,
@@ -20,6 +16,12 @@ body {
   );
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/** Home styles - used in { index.tsx }. */
 .home-logo:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
@@ -62,15 +64,16 @@ body {
   }
 }
 
+/** Portfolio styles - used in { portfolio.tsx }. */
+
+/** Header styles - used in { header.tsx }. */
 .header {
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 50px;
   width: 100%;
-  overflow: hidden;
-  overflow-y: hidden;
 }
 
+/** Footer styles - used in { footer.tsx }. */
 .footer {
   position: absolute;
   bottom: 0;
