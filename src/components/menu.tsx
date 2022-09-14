@@ -36,7 +36,7 @@ const Menu = () => {
       </div>
 
       <span className="cursor-pointer" onClick={() => isOpen(true)}>
-        <Icon className="icon" />
+        <Icon className="icon text-green-cyan hover:text-light-green-cyan" />
       </span>
     </div>
   );

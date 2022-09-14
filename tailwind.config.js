@@ -7,8 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'green-cyan': '#89D9C6',
-        'dark-green-cyan': '#1D594B'
+        'light-green-cyan': '#99ffcc',
+        'green-cyan': '#99cccc',
+        'dark-green-cyan': '#336633'
       }
     }
   },

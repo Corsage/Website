@@ -23,7 +23,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Gmail className="icon mr-5" />
+                <Gmail className="icon mr-5 text-green-cyan hover:text-light-green-cyan" />
               </a>
             </li>
             <li className="nav-item">
@@ -32,7 +32,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="icon mr-5" />
+                <Github className="icon mr-5 text-green-cyan hover:text-light-green-cyan" />
               </a>
             </li>
             <li className="nav-item">
@@ -41,7 +41,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedIn className="icon" />
+                <LinkedIn className="icon text-green-cyan hover:text-light-green-cyan" />
               </a>
             </li>
           </ul>
