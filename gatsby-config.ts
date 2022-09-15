@@ -13,7 +13,12 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: ['G-ZPPXDP8PKT']
+        trackingIds: ['G-ZPPXDP8PKT'],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+          send_page_view: true
+        }
       }
     },
     'gatsby-plugin-htaccess',
