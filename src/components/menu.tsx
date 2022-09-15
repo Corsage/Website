@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
 import Icon from '../assets/svg/menu.svg';
@@ -21,32 +22,60 @@ const Menu = () => {
         } w-[240px] h-screen z-50 p-5
     flex flex-col space-y-4 duration-300`}
       >
+        <Link
+          to="/"
+          className="flex w-full justify-center"
+          activeStyle={{ background: 'rgba(153, 204, 204, 0.25)' }}
+        >
+          <button
+            type="button"
+            className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+            onClick={() => isOpen(false)}
+          >
+            Home
+          </button>
+        </Link>
+
+        <Link
+          to="/portfolio"
+          className="flex w-full justify-center"
+          activeStyle={{ background: 'rgba(153, 204, 204, 0.25)' }}
+        >
+          <button
+            type="button"
+            className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+            onClick={() => isOpen(false)}
+          >
+            Portfolio
+          </button>
+        </Link>
+
         <button
           type="button"
           className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+          onClick={() => isOpen(false)}
         >
-          Home
+          <Link
+            to="/projects"
+            className="flex w-full justify-center"
+            activeStyle={{ color: 'white' }}
+          >
+            Projects
+          </Link>
         </button>
 
         <button
           type="button"
           className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+          onClick={() => isOpen(false)}
         >
-          Portfolio
-        </button>
-
-        <button
-          type="button"
-          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
-        >
-          Projects
-        </button>
-
-        <button
-          type="button"
-          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
-        >
-          Contact
+          <Link
+            to="/contact"
+            className="flex w-full justify-center"
+            activeStyle={{ color: 'white' }}
+          >
+            Contact
+          </Link>
         </button>
       </div>
 
