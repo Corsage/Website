@@ -37,13 +37,16 @@ const Home = () => {
   return (
     <div
       style={styles.container}
-      className="flex h-fit flex-col self-center items-center justify-center m-auto"
+      className="flex w-full h-fit flex-col self-center items-center justify-center m-auto"
     >
       <div className="mb-5">
-        <Logo className="home-logo p-5" />
+        <Logo style={styles.logo} className="p-5 w-11/12 lg:w-full" />
       </div>
 
-      <label className="relative text-gray-400 focus-within:text-gray-600 block">
+      <label
+        style={styles.query}
+        className="relative w-10/12 sm:w-2/3 lg:w-1/2 text-gray-400 focus-within:text-gray-600 block"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 left-3"
@@ -61,12 +64,11 @@ const Home = () => {
 
         <input
           ref={query}
-          style={{ height: 36, width: 720 }}
           type="text"
           name="search-query"
           id="search-query"
           placeholder=""
-          className="block w-full rounded-md bg-white placeholder-gray-400 text-gray-500 appearance-none pl-10 focus:outline-none"
+          className="block h-9 w-full rounded bg-white placeholder-gray-400 text-gray-500 appearance-none pl-10 focus:outline-none"
         />
       </label>
     </div>
@@ -76,6 +78,13 @@ const Home = () => {
 const styles = {
   container: {
     transform: 'translateY(-128px)'
+  },
+  logo: {
+    maxWidth: 192,
+    maxHeight: 192
+  },
+  query: {
+    maxWidth: 720
   }
 };
 
