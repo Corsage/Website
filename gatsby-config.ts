@@ -16,6 +16,7 @@ const config: GatsbyConfig = {
         trackingId: 'G-ZPPXDP8PKT'
       }
     },
+    'gatsby-plugin-htaccess',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
