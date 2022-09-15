@@ -6,9 +6,6 @@ import Icon from '../assets/svg/menu.svg';
 const Menu = () => {
   const [open, isOpen] = useState(false);
 
-  const genericHamburgerLine =
-    'rounded-full bg-green-cyan transition ease transform duration-300';
-
   const menuPress = () => {
     isOpen(!open);
   };
@@ -80,7 +77,7 @@ const Menu = () => {
       </div>
 
       <button
-        className="icon flex items-center justify-center relative text-green-cyan"
+        className="icon flex items-center justify-center relative text-green-cyan hover:text-light-green-cyan"
         onClick={() => menuPress()}
       >
         <span
