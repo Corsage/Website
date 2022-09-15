@@ -5,39 +5,73 @@ import Icon from '../assets/svg/menu.svg';
 const Menu = () => {
   const [open, isOpen] = useState(false);
 
+  const genericHamburgerLine =
+    'rounded-full bg-green-cyan transition ease transform duration-300';
+
+  const menuPress = () => {
+    isOpen(!open);
+  };
+
   return (
     <div>
       <div
         id="collapsable-menu"
-        className={`fixed top-0 ${
+        className={`fixed mt-7 ${
           open ? 'left-0' : 'left-[-250px]'
-        } w-[240px] h-screen z-50 bg-teal-900 p-5
-    flex flex-col space-y-5 text-white duration-300`}
+        } w-[240px] h-screen z-50 p-5
+    flex flex-col space-y-4 duration-300`}
       >
-        <a
-          href="#"
-          className="text-right text-4xl"
-          onClick={() => isOpen(false)}
+        <button
+          type="button"
+          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
         >
-          &times;
-        </a>
-        <a className="hover:text-amber-500" href="#">
           Home
-        </a>
-        <a className="hover:text-amber-500" href="#">
+        </button>
+
+        <button
+          type="button"
+          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+        >
           Portfolio
-        </a>
-        <a className="hover:text-amber-500" href="#">
+        </button>
+
+        <button
+          type="button"
+          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+        >
           Projects
-        </a>
-        <a className="hover:text-amber-500" href="#">
+        </button>
+
+        <button
+          type="button"
+          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+        >
           Contact
-        </a>
+        </button>
       </div>
 
-      <span className="cursor-pointer" onClick={() => isOpen(true)}>
-        <Icon className="icon text-green-cyan hover:text-light-green-cyan" />
-      </span>
+      <button
+        className="icon flex items-center justify-center relative text-green-cyan"
+        onClick={() => menuPress()}
+      >
+        <span
+          className={`transform transition w-full h-px bg-current absolute ${
+            open ? 'translate-y-0 rotate-45' : '-translate-y-2'
+          }`}
+        />
+
+        <span
+          className={`transform transition w-full h-px bg-current absolute ${
+            open ? 'opacity-0 translate-x-3' : 'opacity-100'
+          }`}
+        />
+
+        <span
+          className={`transform transition w-full h-px bg-current absolute ${
+            open ? 'translate-y-0 -rotate-45' : 'translate-y-2'
+          }`}
+        />
+      </button>
     </div>
   );
 };
