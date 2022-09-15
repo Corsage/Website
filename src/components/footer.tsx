@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Canvas, RootState, useFrame } from '@react-three/fiber';
 import { setUncaughtExceptionCaptureCallback } from 'process';
 
 const Footer = () => {
   const mesh = React.useRef();
-  // const geometry = React.useRef();
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   const [hovered, setHover] = React.useState(false);
 
@@ -14,7 +16,7 @@ const Footer = () => {
   /** Setup plane waves. */
   const setup = {
     vertexHeight: 15000,
-    planeSize: 1245000,
+    planeSize: 2500000,
     planeDefinition: 100,
     background: '#1D594B',
     meshColor: '#89D9C6'
@@ -32,6 +34,11 @@ const Footer = () => {
     gl.alpha = false;
     gl.setSize(window.innerWidth, window.innerHeight);
     gl.setClearColor(setup.background, 0);
+  };
+
+  const resizeWindow = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   };
 
   const Scene = () => {
