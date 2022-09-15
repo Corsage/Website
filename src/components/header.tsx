@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import Menu from './menu';
 
@@ -18,31 +19,31 @@ const Header = () => {
 
           <ul className="navbar-nav flex ml-auto ">
             <li className="nav-item">
-              <a
+              <OutboundLink
                 href="mailto:jay.corsage@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Gmail className="icon mr-5 text-green-cyan hover:text-light-green-cyan" />
-              </a>
+              </OutboundLink>
             </li>
             <li className="nav-item">
-              <a
+              <OutboundLink
                 href="https://github.com/Corsage"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Github className="icon mr-5 text-green-cyan hover:text-light-green-cyan" />
-              </a>
+              </OutboundLink>
             </li>
             <li className="nav-item">
-              <a
+              <OutboundLink
                 href="https://linkedin.com/in/corsage/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedIn className="icon text-green-cyan hover:text-light-green-cyan" />
-              </a>
+              </OutboundLink>
             </li>
           </ul>
         </div>
