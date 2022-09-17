@@ -16,8 +16,7 @@ const config: GatsbyConfig = {
         trackingIds: ['G-ZPPXDP8PKT'],
         gtagConfig: {
           anonymize_ip: true,
-          cookie_expires: 0,
-          send_page_view: true
+          cookie_expires: 0
         }
       }
     },
