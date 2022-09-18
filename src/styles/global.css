@@ -65,21 +65,3 @@ body {
 }
 
 /** Portfolio styles - used in { portfolio.tsx }. */
-
-/** Header styles - used in { header.tsx }. */
-.header {
-  position: relative;
-  height: 50px;
-  width: 100%;
-}
-
-/** Footer styles - used in { footer.tsx }. */
-.footer {
-  position: absolute;
-  bottom: 0;
-  height: 400px;
-  width: 100%;
-  z-index: -1;
-  overflow: hidden;
-  overflow-y: hidden;
-}
