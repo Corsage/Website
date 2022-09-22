@@ -7,6 +7,7 @@ import Shomigo from '../assets/svg/shomigo.svg';
 import Linggo from '../assets/svg/linggo.svg';
 import Alyze from '../assets/svg/alyze.svg';
 import OH from '../assets/svg/OH.svg';
+import PaintBrush from '../assets/svg/paint-brush.svg';
 
 const Portfolio = () => {
   const [emojiIndex, setEmojiIndex] = useState(0);
@@ -46,14 +47,17 @@ const Portfolio = () => {
       </div>
 
       <div className="flex self-start items-center ml-10 mt-10 text-white">
-        <StaticImage
-          height={375}
-          aspectRatio={1 / 1}
-          imgStyle={{ background: '#222222' }}
-          className={`rounded ${emojiIndex === 0 ? '' : 'hidden'} `}
-          src="../assets/images/corsage.png"
-          alt="Corsage"
-        />
+        <div className="relative flex items-center justify-center text-green-cyan hover:text-light-green-cyan">
+          <PaintBrush height={375} />
+
+          <StaticImage
+            height={375}
+            aspectRatio={1 / 1}
+            className={`absolute ${emojiIndex === 0 ? '' : 'hidden'} `}
+            src="../assets/images/corsage.png"
+            alt="Corsage"
+          />
+        </div>
 
         <span style={{ zIndex: 1 }} className="w-60 h-0.5 -ml-10 bg-white" />
 
