@@ -24,6 +24,7 @@ const Footer = () => {
             <li className="nav-item mr-5">
               <Link
                 to="/portfolio"
+                partiallyActive={true}
                 className="text-sm text-green-cyan hover:text-light-green-cyan"
                 activeClassName="text-light-green-cyan"
               >
@@ -33,6 +34,7 @@ const Footer = () => {
             <li className="nav-item mr-5">
               <Link
                 to="/projects"
+                partiallyActive={true}
                 className="text-sm text-green-cyan hover:text-light-green-cyan"
                 activeClassName="text-light-green-cyan"
               >
@@ -42,6 +44,7 @@ const Footer = () => {
             <li className="nav-item">
               <Link
                 to="/contact"
+                partiallyActive={true}
                 className="text-sm text-green-cyan hover:text-light-green-cyan"
                 activeClassName="text-light-green-cyan"
               >
