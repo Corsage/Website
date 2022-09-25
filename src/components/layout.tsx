@@ -20,7 +20,7 @@ const Layout = ({ children }: Props) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6 text-green-cyan"
+            className="w-6 h-6 text-cyan"
           >
             <path
               fillRule="evenodd"
@@ -34,9 +34,9 @@ const Layout = ({ children }: Props) => {
       <main className="container flex flex-1 mx-auto">{children}</main>
       <Footer />
 
-      <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
+      {/* <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
         <Waves />
-      </div>
+      </div> */}
     </div>
   );
 };
