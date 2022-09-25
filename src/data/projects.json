@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Masterani",
+    "image": "masterani.svg",
+    "skills": ["Android", "Kotlin", "Node.js"],
+    "description": "An android app built on top of masterani.me with tons of additional tracking and features. Made as fun project to use Kotlin.",
+    "link": "https://github.com/Corsage/Masterani"
+  }
+]

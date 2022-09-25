@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "bld.ai",
+    "logo": "bld.svg",
+    "skills": ["React Native", "Python & Django", "Firebase"],
+    "description": [
+      "Modified an existing application to include in-app data tracking to speed up building datasets for classification analysis, resulting in 80%+ accuracy.",
+      "Created a tool to visualize training metrics for PyTorch and Tensorflow to present to stakeholders, increasing confidence on 4 projects for funding.",
+      "Created and released a partnered application using React Native, Firebase, and Django; achieved 1000+ daily active users.",
+      "Integrated a single sign-on (SSO) middleware for existing users onto the new mobile app and web platform, increasing retention rate from 60% to 85%."
+    ]
+  },
+  {
+    "title": "Lead Software Engineer",
+    "company": "Shomigo",
+    "logo": "shomigo.svg",
+    "skills": ["React.js", "Next.js", "Node.js", "MongoDB", "Redis"],
+    "description": [
+      "Led the development of the official Shopify app used by all 30 partnered stores to manage a combined inventory of 2000+ products on the Shomigo platform.",
+      "Formalized detailed database design models for users, shops, and products with MongoDB and Redis, reducing development overhead and onboarding.",
+      "Automated production and staging builds using CircleCI and Github, standardizing deployments and releases seamlessly."
+    ]
+  },
+  {
+    "title": "Full Stack Engineer",
+    "company": "Linggo",
+    "logo": "linggo.svg",
+    "skills": ["React Native", "React.js", "AWS"],
+    "description": [
+      "Developed an augmentative and alternative communication mobile app in React-Native to boost the quality of life for individuals with limited speech.",
+      "Identified and fixed memory management issues in critical areas of the patient app affecting 65% of long-term users.",
+      "Automated build and deployment processes with bash scripts saving 30 minutes of manual work and streamlining onboarding procedures.",
+      "Assisted in migrating to a serverless architecture using AWS Route 53, Lambda, and Cognito, reducing CapEx costs significantly."
+    ]
+  },
+  {
+    "title": "Android Developer",
+    "company": "Alyze",
+    "logo": "alyze.svg",
+    "skills": ["Android", "Kotlin", "Dagger", "Rx Programming"],
+    "description": [
+      "Organized and led a team to build two peer-to-peer tutoring network mobile apps for Android.",
+      "Communicated with backend team to design various endpoints optimized for the Android activity lifecycle, improving overall user experience.",
+      "Utilized a combination of RxAndroid with Retrofit to deliver content to data models from a REST API.",
+      "Produced modular code with Dagger2 allowing swift deployments via hot-swapping components."
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Ministry of Health Ontario",
+    "logo": "moh.svg",
+    "skills": ["Java", "JavaScript", "VBA", "FHIR"],
+    "description": [
+      "Built a universal two-factor authentication system to replace security fobs across health-care units, saving $50,000 yearly.",
+      "Deployed multiple auto generating reports that allow viewing of analytics to increase productivity amongst health care professionals by 45%.",
+      "Contributed to the architecture and design of a database in collaboration with the FHIR team on over a million electronic health records.",
+      "Prototyped a web application using blockchain via Hyperledger to showcase immutable history of electronic health records."
+    ]
+  }
+]
