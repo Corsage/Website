@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="navbar py-6 relative flex items-center w-full justify-between">
       <div className="px-6 w-full flex flex-wrap items-center justify-between">
         <div className="flex flex-col-reverse md:flex-row items-center w-full">
-          <span className="text-sm text-green-cyan sm:text-center">
+          <span className="text-sm text-cyan sm:text-center">
             &copy; {new Date().getFullYear().toString()} Corsage. All Rights
             Reserved.
           </span>
@@ -15,8 +15,8 @@ const Footer = () => {
             <li className="nav-item mr-5">
               <Link
                 to="/"
-                className="text-sm text-green-cyan hover:text-light-green-cyan"
-                activeClassName="text-light-green-cyan"
+                className="text-sm text-cyan hover:text-accent"
+                activeClassName="text-accent"
               >
                 Home
               </Link>
@@ -25,8 +25,8 @@ const Footer = () => {
               <Link
                 to="/portfolio"
                 partiallyActive={true}
-                className="text-sm text-green-cyan hover:text-light-green-cyan"
-                activeClassName="text-light-green-cyan"
+                className="text-sm text-cyan hover:text-accent"
+                activeClassName="text-accent"
               >
                 Portfolio
               </Link>
@@ -35,8 +35,8 @@ const Footer = () => {
               <Link
                 to="/projects"
                 partiallyActive={true}
-                className="text-sm text-green-cyan hover:text-light-green-cyan"
-                activeClassName="text-light-green-cyan"
+                className="text-sm text-cyan hover:text-accent"
+                activeClassName="text-accent"
               >
                 Projects
               </Link>
@@ -45,8 +45,8 @@ const Footer = () => {
               <Link
                 to="/contact"
                 partiallyActive={true}
-                className="text-sm text-green-cyan hover:text-light-green-cyan"
-                activeClassName="text-light-green-cyan"
+                className="text-sm text-cyan hover:text-accent"
+                activeClassName="text-accent"
               >
                 Contact
               </Link>
