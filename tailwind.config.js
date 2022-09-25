@@ -5,11 +5,19 @@ module.exports = {
     './src/components/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
+    fontFamily: {
+      serif: ['Inter'],
+      mono: ['Fira Code']
+    },
+
     extend: {
       colors: {
-        'light-green-cyan': '#99ffcc',
-        'green-cyan': '#99cccc',
-        'dark-green-cyan': '#336633'
+        accent: '#89D9C6',
+        black: '#010606',
+        white: '#F8F9F8',
+        cyan: '#668B89',
+        'light-cyan': '#9DADAC',
+        'dark-cyan': '#334D4B'
       }
     }
   },
