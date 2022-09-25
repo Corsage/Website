@@ -26,7 +26,7 @@ const Menu = () => {
         >
           <button
             type="button"
-            className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+            className="w-full py-1 rounded text-cyan border border-cyan hover:bg-cyan hover:text-black"
             onClick={() => isOpen(false)}
           >
             Home
@@ -40,7 +40,7 @@ const Menu = () => {
         >
           <button
             type="button"
-            className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+            className="w-full py-1 rounded text-cyan border border-cyan hover:bg-cyan hover:text-black"
             onClick={() => isOpen(false)}
           >
             Portfolio
@@ -49,7 +49,7 @@ const Menu = () => {
 
         <button
           type="button"
-          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+          className="w-full py-1 rounded text-cyan border border-cyan hover:bg-cyan hover:text-black"
           onClick={() => isOpen(false)}
         >
           <Link
@@ -63,7 +63,7 @@ const Menu = () => {
 
         <button
           type="button"
-          className="w-full py-1 rounded text-green-cyan border border-green-cyan hover:bg-green-cyan hover:text-black"
+          className="w-full py-1 rounded text-cyan border border-cyan hover:bg-cyan hover:text-black"
           onClick={() => isOpen(false)}
         >
           <Link
@@ -77,7 +77,7 @@ const Menu = () => {
       </div>
 
       <button
-        className="icon flex items-center justify-center relative text-green-cyan hover:text-light-green-cyan"
+        className="icon flex items-center justify-center relative text-cyan hover:text-accent"
         onClick={() => menuPress()}
       >
         <span
