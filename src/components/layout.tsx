@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import { PageProps } from 'gatsby';
 
 import Footer from './footer';
 import Header from './header';
@@ -6,11 +7,7 @@ import Banner from './banner';
 
 import Waves from './waves';
 
-interface Props {
-  children?: ReactNode;
-}
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, location }: PageProps) => {
   return (
     <div className="relative flex flex-col min-h-screen">
       <Banner
@@ -34,9 +31,11 @@ const Layout = ({ children }: Props) => {
       <main className="container flex flex-1 mx-auto">{children}</main>
       <Footer />
 
-      {/* <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
-        <Waves />
-      </div> */}
+      {location.pathname === '/' && (
+        <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
+          <Waves />
+        </div>
+      )}
     </div>
   );
 };
