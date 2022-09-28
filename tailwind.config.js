@@ -17,6 +17,7 @@ module.exports = {
         white: '#F8F9F8',
         cyan: '#668B89',
         'light-cyan': '#9DADAC',
+        'medium-cyan': '#1b3a37',
         'dark-cyan': '#334D4B'
       }
     }
