@@ -1,6 +1,9 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
 
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
+
 import Footer from './footer';
 import Header from './header';
 import Banner from './banner';
@@ -9,6 +12,8 @@ import Notifications from './notifications';
 import Waves from './waves';
 
 const Layout = ({ children, location }: PageProps) => {
+  const waves: boolean = useSelector((state: RootState) => state.global.waves);
+
   return (
     <div className="relative flex flex-col min-h-screen">
       <Banner
@@ -35,11 +40,16 @@ const Layout = ({ children, location }: PageProps) => {
       </main>
       <Footer />
 
-      {(location.pathname === '/' || location.pathname.includes('contact')) && (
-        <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
-          <Waves />
-        </div>
-      )}
+      {waves &&
+        (location.pathname === '/' ||
+          location.pathname.includes('contact')) && (
+          <div
+            style={styles.wavesContainer}
+            className="absolute bottom-0 -z-50"
+          >
+            <Waves />
+          </div>
+        )}
     </div>
   );
 };
