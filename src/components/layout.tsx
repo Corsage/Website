@@ -4,6 +4,7 @@ import { PageProps } from 'gatsby';
 import Footer from './footer';
 import Header from './header';
 import Banner from './banner';
+import Notifications from './notifications';
 
 import Waves from './waves';
 
@@ -28,10 +29,13 @@ const Layout = ({ children, location }: PageProps) => {
         }
       />
       <Header />
-      <main className="container flex flex-1 mx-auto">{children}</main>
+      <main className="container flex flex-1 mx-auto">
+        <Notifications />
+        {children}
+      </main>
       <Footer />
 
-      {location.pathname === '/' && (
+      {(location.pathname === '/' || location.pathname === '/contact') && (
         <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
           <Waves />
         </div>
