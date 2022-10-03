@@ -1,0 +1,29 @@
+import React from 'react';
+
+import Notification from '../models/notification';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
+import Toast from './toast';
+
+const Notifications = () => {
+  const toasts: Map<number, Notification> = useSelector(
+    (state: RootState) => state.notification.notificationList
+  );
+
+  return (
+    <div className="fixed z-50 left-1/2 transform -translate-x-1/2">
+      {Array.from(toasts).map((toast) => {
+        return (
+          <Toast
+            key={toast[0]}
+            id={toast[0]}
+            notification={toast[1]}
+            duration={3000}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+export default Notifications;
