@@ -37,13 +37,15 @@ const Toast = ({ notification, id, duration }: Props) => {
 
   return (
     <div
-      className={`flex items-center p-4 space-x-4 w-full max-w-xs text-gray-500 bg-white rounded-lg divide-x divide-gray-200 shadow space-x ${
+      className={`flex items-center p-4 space-x-4 w-full max-w-xs bg-dark-cyan rounded-lg divide-x divide-white shadow-lg space-x ${
         show ? 'fade-in' : 'fade-out'
       }`}
       role="alert"
     >
-      {notification.icon}
-      <div className="pl-4 text-sm font-normal">{notification.description}</div>
+      <div className="text-accent">{notification.icon}</div>
+      <div className="pl-4 text-sm text-white font-serif">
+        {notification.description}
+      </div>
     </div>
   );
 };

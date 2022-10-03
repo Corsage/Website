@@ -11,7 +11,7 @@ const Notifications = () => {
   );
 
   return (
-    <div className="fixed z-50 left-1/2 transform -translate-x-1/2">
+    <div className="fixed flex flex-col gap-3 z-50 left-1/2 transform -translate-x-1/2">
       {Array.from(toasts).map((toast) => {
         return (
           <Toast
