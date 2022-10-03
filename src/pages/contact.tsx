@@ -38,8 +38,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-center w-full">
-      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-cyan/20 text-white rounded shadow-lg">
+    <div className="text-center w-full self-center">
+      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-cyan/20 text-white rounded shadow-lg">
         <div className="flex flex-col justify-between">
           <div className="mb-6 md:mb-0">
             <h2 className="text-4xl uppercase font-semibold leading-tight">
