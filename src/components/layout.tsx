@@ -35,7 +35,7 @@ const Layout = ({ children, location }: PageProps) => {
       </main>
       <Footer />
 
-      {(location.pathname === '/' || location.pathname === '/contact') && (
+      {(location.pathname === '/' || location.pathname.includes('contact')) && (
         <div style={styles.wavesContainer} className="absolute bottom-0 -z-50">
           <Waves />
         </div>
