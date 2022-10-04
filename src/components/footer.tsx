@@ -11,11 +11,11 @@ const Footer = () => {
             Reserved.
           </span>
 
-          <ul className="navbar-nav flex md:ml-auto mb-1 md:mb-0">
+          <ul className="navbar-nav flex text-cyan md:ml-auto mb-1 md:mb-0">
             <li className="nav-item mr-5">
               <Link
                 to="/"
-                className="text-sm text-cyan hover:text-accent"
+                className="text-sm hover:text-accent"
                 activeClassName="text-accent"
               >
                 Home
@@ -25,7 +25,7 @@ const Footer = () => {
               <Link
                 to="/portfolio"
                 partiallyActive={true}
-                className="text-sm text-cyan hover:text-accent"
+                className="text-sm hover:text-accent"
                 activeClassName="text-accent"
               >
                 Portfolio
@@ -35,7 +35,7 @@ const Footer = () => {
               <Link
                 to="/blog"
                 partiallyActive={true}
-                className="text-sm text-cyan hover:text-accent"
+                className="text-sm hover:text-accent"
                 activeClassName="text-accent"
               >
                 Blog
@@ -45,7 +45,7 @@ const Footer = () => {
               <Link
                 to="/contact"
                 partiallyActive={true}
-                className="text-sm text-cyan hover:text-accent"
+                className="text-sm hover:text-accent"
                 activeClassName="text-accent"
               >
                 Contact
