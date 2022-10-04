@@ -33,12 +33,12 @@ const Footer = () => {
             </li>
             <li className="nav-item mr-5">
               <Link
-                to="/projects"
+                to="/blog"
                 partiallyActive={true}
                 className="text-sm text-cyan hover:text-accent"
                 activeClassName="text-accent"
               >
-                Projects
+                Blog
               </Link>
             </li>
             <li className="nav-item">
