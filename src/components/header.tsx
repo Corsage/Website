@@ -26,7 +26,7 @@ const Header = () => {
       <Menu isOpen={sideBarOpen} setOpen={setSideBarOpen} />
 
       <div className="px-6 w-full flex flex-wrap items-center justify-between">
-        <div className="flex items-center w-full">
+        <div className="flex w-full items-center">
           <button
             className="icon flex items-center justify-center relative text-cyan hover:text-accent"
             onClick={() => setSideBarOpen(true)}
@@ -50,8 +50,8 @@ const Header = () => {
             />
           </button>
 
-          <ul className="navbar-nav flex ml-auto">
-            <li className="nav-item mr-5">
+          <ul className="navbar-nav flex ml-auto items-center">
+            <li className="flex nav-item mr-5">
               <label
                 htmlFor="waves-toggle"
                 className="inline-flex relative items-center mr-5 cursor-pointer"
