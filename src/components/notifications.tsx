@@ -11,7 +11,10 @@ const Notifications = () => {
   );
 
   return (
-    <div className="fixed flex flex-col gap-3 z-50 left-1/2 transform -translate-x-1/2">
+    <div
+      style={styles.container}
+      className="fixed flex items-center flex-col gap-3 z-50 left-1/2 transform -translate-x-1/2"
+    >
       {Array.from(toasts).map((toast) => {
         return (
           <Toast
@@ -24,6 +27,12 @@ const Notifications = () => {
       })}
     </div>
   );
+};
+
+const styles = {
+  container: {
+    minWidth: 310
+  }
 };
 
 export default Notifications;
