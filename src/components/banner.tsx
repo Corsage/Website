@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
+import { useDispatch } from 'react-redux';
+import { toggleBanner } from '../redux/slices/globalSlice';
+
 interface Props {
   text: string;
   icon: any;
 }
 
 const Banner = ({ text, icon }: Props) => {
-  const [show, setShow] = useState(true);
+  const dispatch = useDispatch();
 
-  if (!show) {
-    return null;
-  }
+  const hide = () => {
+    dispatch(toggleBanner(false));
+  };
 
   return (
     <div className="bg-medium-cyan">
@@ -35,7 +38,7 @@ const Banner = ({ text, icon }: Props) => {
           <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
-              onClick={() => setShow(false)}
+              onClick={() => hide()}
               className="-mr-1 flex rounded-md p-2 focus:outline-none sm:-mr-2"
             >
               <span className="sr-only">Dismiss</span>
