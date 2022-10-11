@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { HeadFC, Link } from 'gatsby';
+import { HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-
-import experiences from '../data/experiences.json';
-import projects from '../data/projects.json';
 
 import Job from '../models/experience';
 import Assignment from '../models/project';
@@ -11,10 +8,16 @@ import Assignment from '../models/project';
 import Experience from '../components/portfolio/experience';
 import Project from '../components/portfolio/project';
 
+import useExperiences from '../hooks/useExperiences';
+import useProjects from '../hooks/useProjects';
+
 const Portfolio = () => {
   const [emojiIndex, setEmojiIndex] = useState(0);
   const [aboutIndex, setAboutIndex] = useState(0);
   const [expIndex, setExpIndex] = useState(0);
+
+  const experiences = useExperiences();
+  const projects = useProjects();
 
   /** Emojis found in ../assets/images. */
   const emojis = [
@@ -182,7 +185,7 @@ const Portfolio = () => {
 
         <div style={{ width: 1000, height: 500 }} className="flex mt-6">
           <ol className="flex flex-col gap-3 items-center justify-center mr-4">
-            {experiences.map((job: Job, index) => {
+            {experiences.map(({ node }: { node: Job }, index: number) => {
               return (
                 <li key={`experience-${index}`}>
                   <button
@@ -193,8 +196,8 @@ const Portfolio = () => {
                   >
                     <img
                       width={48}
-                      src={`../../${job.logo}`}
-                      alt={job.company}
+                      src={`../../${node.logo}`}
+                      alt={node.company}
                     />
                   </button>
                 </li>
@@ -205,7 +208,7 @@ const Portfolio = () => {
           <span className="ml-4 w-0.5 h-full bg-accent" />
 
           <div className="flex w-full my-6 p-6 bg-dark-cyan">
-            <Experience job={experiences[expIndex]} />
+            {<Experience job={experiences[expIndex].node} />}
           </div>
         </div>
       </div>
@@ -217,10 +220,10 @@ const Portfolio = () => {
         </div>
 
         <ol className="flex flex-row flex-wrap mt-6 gap-3 justify-center">
-          {projects.map((project: Assignment, index) => {
+          {projects.map(({ node }: { node: Assignment }, index: number) => {
             return (
               <li key={`project-${index}`}>
-                <Project project={project} />
+                <Project project={node} />
               </li>
             );
           })}
@@ -238,5 +241,4 @@ const styles = {
 };
 
 export default Portfolio;
-
-export const Head: HeadFC = () => <title>Corsage - About</title>;
+export const Head: HeadFC = () => <title>Portfolio</title>;
