@@ -50,7 +50,7 @@ const Layout = ({ children, location }: PageProps) => {
           location.pathname.includes('contact')) && (
           <div
             style={styles.wavesContainer}
-            className="absolute bottom-0 -z-50"
+            className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
           >
             <Waves />
           </div>
