@@ -19,6 +19,7 @@
   "dependencies": {
     "@react-three/fiber": "^8.7.2",
     "@reduxjs/toolkit": "^1.8.5",
+    "@types/three": "^0.144.0",
     "gatsby": "^4.22.1",
     "gatsby-plugin-google-gtag": "^4.23.0",
     "gatsby-plugin-htaccess": "^1.4.0",
