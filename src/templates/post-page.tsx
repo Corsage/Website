@@ -13,12 +13,17 @@ const PostPage = ({ data }: Props) => {
   const { post } = data;
 
   return (
-    <div className="w-full my-10">
+    <div className="w-full my-10 mx-6 sm:mx-0">
       <div className="text-center text-white my-10">
         <h1 className="text-4xl font-semibold uppercase tracking-widest">
           {post.frontmatter.title}
         </h1>
       </div>
+
+      <article
+        className="flex flex-col blog-post text-white gap-3"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </div>
   );
 };
