@@ -179,7 +179,7 @@ const Portfolio = () => {
 
       <div className="flex flex-col w-full my-10 items-center">
         <div className="flex w-full items-center mb-6">
-          <h2 className="text-4xl font-semibold">WORK EXPERIENCE</h2>
+          <h2 className="text-4xl font-semibold uppercase">Work Experience</h2>
           <span className="h-0.5 flex-1 ml-6 bg-white" />
         </div>
 
@@ -218,7 +218,9 @@ const Portfolio = () => {
       <div className="flex flex-col w-full my-10 items-center">
         <div className="flex w-full items-center mb-6">
           <span className="h-0.5 flex-1 mr-6 bg-white" />
-          <h2 className="text-4xl font-semibold">PERSONAL PROJECTS</h2>
+          <h2 className="text-4xl font-semibold uppercase">
+            Personal Projects
+          </h2>
         </div>
 
         <ol className="flex flex-row flex-wrap mt-6 gap-3 justify-center">
