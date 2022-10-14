@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, StaticQueryDocument } from 'gatsby';
-import PostItem from '../../components/blog/post-item';
-import BlogPost from '../../models/blog-post';
+import PostItem from '../components/blog/post-item';
+import BlogPost from '../models/blog-post';
 
 interface Props {
   data: StaticQueryDocument;
