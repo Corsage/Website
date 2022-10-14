@@ -1,13 +1,13 @@
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import React from 'react';
 
-import Assignment from '../../models/project';
+import Project from '../../models/project';
 
 interface Props {
-  project: Assignment;
+  project: Project;
 }
 
-const Project = ({ project }: Props) => {
+const ProjectItem = ({ project }: Props) => {
   return (
     <div
       style={{ width: 350 }}
@@ -31,8 +31,8 @@ const Project = ({ project }: Props) => {
       </div>
 
       <div className="flex flex-col p-5 gap-3">
-        <h4 className="text-xl font-mono tracking-tight text-white">
-          {project.title.toUpperCase()}
+        <h4 className="text-xl font-mono tracking-tight text-white uppercase">
+          {project.title}
         </h4>
 
         <p className="font-normal text-light-cyan">{project.description}</p>
@@ -54,4 +54,4 @@ const Project = ({ project }: Props) => {
   );
 };
 
-export default Project;
+export default ProjectItem;
