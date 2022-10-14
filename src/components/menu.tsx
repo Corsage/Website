@@ -90,6 +90,7 @@ const Menu = ({ isOpen, setOpen }: Props) => {
               to="/blog"
               className="flex items-center p-2 rounded-lg text-light-cyan hover:text-accent"
               activeClassName="bg-cyan/30"
+              onClick={() => setOpen(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
