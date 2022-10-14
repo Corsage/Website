@@ -27,6 +27,14 @@ const config: GatsbyConfig = {
         path: './src/data/'
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown-pages',
+        path: './src/data/blog'
+      }
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-htaccess',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
