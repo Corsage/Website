@@ -7,10 +7,6 @@ description: This is a custom description for SEO and Open Graph purposes. If it
 
 > You are given the `head` of a linked list. Delete the middle node, and return the `head` of the modified linked list. The middle node of a linked list of size `n` is the `⌊n / 2⌋` node from the **start** using **0-based indexing**, where `⌊x⌋` denotes the largest integer less than or equal to `x`.
 
-<div class="hidden sm:flex w-full justify-center items-center mt-6 mb-3">
-<img style="max-width: 600px" src="https://assets.leetcode.com/uploads/2021/11/16/eg1drawio.png" />
-</div>
-
 ### Initial Thinking
 
 This question requires us to find the node before the **middle** and after it. Thus, we need to use the **fast-slow pointer** approach on the LinkedList to efficiently find the middle node. However, we need a pointer from **behind** the middle node, so we need some sort of `prev` pointer that will keep the previous LinkedList item that `slow` had.
