@@ -10,9 +10,6 @@ interface Props {
 
 const TagPage = ({ pageContext, data }: Props) => {
   const { tag } = pageContext;
-  console.log(tag);
-  console.log(JSON.stringify(data));
-
   const { posts } = data;
 
   return (
