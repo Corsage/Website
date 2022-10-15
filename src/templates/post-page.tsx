@@ -13,15 +13,17 @@ const PostPage = ({ data }: Props) => {
   const { post } = data;
 
   return (
-    <div className="w-full my-10 mx-6 sm:mx-0">
-      <div className="text-center text-white my-10">
-        <h1 className="text-4xl font-semibold uppercase tracking-widest">
+    <div className="flex flex-col w-full my-10 mx-6 sm:mx-0 items-center">
+      <div className="flex w-full items-center">
+        <h2 className="text-4xl font-semibold uppercase text-white text-center">
           {post.frontmatter.title}
-        </h1>
+        </h2>
+        <span className="h-0.5 flex-1 ml-6 bg-white" />
       </div>
 
       <article
-        className="flex flex-col blog-post text-white gap-3"
+        className="flex w-full flex-col blog-post text-white gap-3 my-10"
+        style={{ maxWidth: 1000 }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </div>
