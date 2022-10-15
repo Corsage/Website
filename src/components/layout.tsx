@@ -18,7 +18,7 @@ const Layout = ({ children, location }: PageProps) => {
   );
 
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className={`relative flex flex-col min-h-screen ${waves && 'dark'}`}>
       {banner && (
         <Banner
           text="This website is currently in pre-release and may contain bugs."
