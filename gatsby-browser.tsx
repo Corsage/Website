@@ -4,6 +4,7 @@ import type { GatsbyBrowser } from 'gatsby';
 import gatsbyRedux from './gatsby-redux';
 
 import './src/styles/global.css';
+import './src/styles/prism-theme.css';
 import Layout from './src/components/layout';
 
 export const wrapRootElement = gatsbyRedux;

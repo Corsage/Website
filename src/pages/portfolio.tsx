@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Job from '../models/experience';
-import Assignment from '../models/project';
+import Experience from '../models/experience';
+import Project from '../models/project';
 
-import Experience from '../components/portfolio/experience';
-import Project from '../components/portfolio/project';
+import ExperienceItem from '../components/portfolio/experience-item';
+import ProjectItem from '../components/portfolio/project-item';
 
 import useExperiences from '../hooks/useExperiences';
 import useProjects from '../hooks/useProjects';
@@ -67,7 +67,7 @@ const Portfolio = () => {
 
         <div className="flex ml-6">
           <div className="flex flex-col ml-6 gap-3">
-            <h1 className="text-4xl font-semibold">JAY CHOWDHARY</h1>
+            <h1 className="text-4xl font-semibold uppercase">Jay Chowdhary</h1>
             <div className="flex flex-row gap-3">
               <button
                 onClick={() => setAboutIndex(0)}
@@ -179,36 +179,38 @@ const Portfolio = () => {
 
       <div className="flex flex-col w-full my-10 items-center">
         <div className="flex w-full items-center mb-6">
-          <h2 className="text-4xl font-semibold">WORK EXPERIENCE</h2>
+          <h2 className="text-4xl font-semibold uppercase">Work Experience</h2>
           <span className="h-0.5 flex-1 ml-6 bg-white" />
         </div>
 
         <div style={{ width: 1000, height: 500 }} className="flex mt-6">
           <ol className="flex flex-col gap-3 items-center justify-center mr-4">
-            {experiences.map(({ node }: { node: Job }, index: number) => {
-              return (
-                <li key={`experience-${index}`}>
-                  <button
-                    className={`rounded px-3 py-3 hover:bg-dark-cyan ${
-                      expIndex === index && 'bg-dark-cyan'
-                    }`}
-                    onClick={() => setExpIndex(index)}
-                  >
-                    <img
-                      width={48}
-                      src={`../../${node.logo}`}
-                      alt={node.company}
-                    />
-                  </button>
-                </li>
-              );
-            })}
+            {experiences.map(
+              ({ node }: { node: Experience }, index: number) => {
+                return (
+                  <li key={`experience-${index}`}>
+                    <button
+                      className={`rounded px-3 py-3 hover:bg-dark-cyan ${
+                        expIndex === index && 'bg-dark-cyan'
+                      }`}
+                      onClick={() => setExpIndex(index)}
+                    >
+                      <img
+                        width={48}
+                        src={`../../${node.logo}`}
+                        alt={node.company}
+                      />
+                    </button>
+                  </li>
+                );
+              }
+            )}
           </ol>
 
           <span className="ml-4 w-0.5 h-full bg-accent" />
 
           <div className="flex w-full my-6 p-6 bg-dark-cyan">
-            {<Experience job={experiences[expIndex].node} />}
+            {<ExperienceItem experience={experiences[expIndex].node} />}
           </div>
         </div>
       </div>
@@ -216,14 +218,16 @@ const Portfolio = () => {
       <div className="flex flex-col w-full my-10 items-center">
         <div className="flex w-full items-center mb-6">
           <span className="h-0.5 flex-1 mr-6 bg-white" />
-          <h2 className="text-4xl font-semibold">PERSONAL PROJECTS</h2>
+          <h2 className="text-4xl font-semibold uppercase">
+            Personal Projects
+          </h2>
         </div>
 
         <ol className="flex flex-row flex-wrap mt-6 gap-3 justify-center">
-          {projects.map(({ node }: { node: Assignment }, index: number) => {
+          {projects.map(({ node }: { node: Project }, index: number) => {
             return (
               <li key={`project-${index}`}>
-                <Project project={node} />
+                <ProjectItem project={node} />
               </li>
             );
           })}

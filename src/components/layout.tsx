@@ -18,7 +18,7 @@ const Layout = ({ children, location }: PageProps) => {
   );
 
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className={`relative flex flex-col min-h-screen ${waves && 'dark'}`}>
       {banner && (
         <Banner
           text="This website is currently in pre-release and may contain bugs."
@@ -47,7 +47,8 @@ const Layout = ({ children, location }: PageProps) => {
 
       {waves &&
         (location.pathname === '/' ||
-          location.pathname.includes('contact')) && (
+          location.pathname.includes('contact') ||
+          location.pathname.includes('blog')) && (
           <div
             style={styles.wavesContainer}
             className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
