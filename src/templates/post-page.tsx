@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, StaticQueryDocument } from 'gatsby';
+import { graphql, Link, StaticQueryDocument } from 'gatsby';
 import PostItem from '../components/blog/post-item';
 import BlogPost from '../models/blog-post';
 
@@ -8,8 +8,6 @@ interface Props {
 }
 
 const PostPage = ({ data }: Props) => {
-  console.log(JSON.stringify(data));
-
   const { post } = data;
 
   return (
@@ -26,6 +24,43 @@ const PostPage = ({ data }: Props) => {
         style={{ maxWidth: 1000 }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+
+      <div className="flex flex-col-reverse md:flex-row w-full justify-center items-center gap-3">
+        <Link
+          to="/blog"
+          className="flex flex-row w-fit h-fit px-4 py-2 rounded bg-medium-cyan text-white hover:bg-dark-cyan"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 mr-2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+            />
+          </svg>
+          Back to Blog
+        </Link>
+        <div className="flex flex-col justify-center items-center md:flex-row gap-3 px-2 py-1 rounded text-white dark:text-medium-cyan">
+          <span className="text-xl font-semibold">Explore related tags</span>
+          {post.frontmatter.tags.map((tag: string) => {
+            return (
+              <Link
+                key={`related-tag-${tag}`}
+                to={`/blog/tags/${tag}`}
+                className="hover:underline"
+              >
+                {tag}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

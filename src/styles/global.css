@@ -192,6 +192,9 @@ body {
 }
 
 .blog-post > blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   color: #e0e0e0;
   border-left: 5px solid #9dadac;
   box-sizing: border-box;
@@ -202,8 +205,19 @@ body {
   display: flex;
 }
 
+.blog-post > ul,
+.blog-post > blockquote > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
 .blog-post > blockquote > p > code,
-.blog-post > p > code {
+.blog-post > p > code,
+.blog-post > blockquote > ul > li > code,
+.blog-post > ul > li > code {
   background: #1b3a37;
   word-wrap: break-word;
   box-decoration-break: clone;
