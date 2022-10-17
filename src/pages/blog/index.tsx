@@ -17,12 +17,12 @@ const Blog = ({ data }: Props) => {
           Corsage
         </h1>
 
-        <p className="font-mono">
+        <p className="font-mono text-center">
           This is a collection of my thoughts and notes for various things.
         </p>
 
         <div className="flex w-full flex-col justify-center items-center gap-3 mt-3">
-          <label className="relative w-10/12 sm:w-2/3 lg:w-1/2 text-gray-400 focus-within:text-gray-600 block">
+          <label className="relative w-full sm:w-2/3 lg:w-1/2 text-light-cyan focus-within:text-cyan">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -42,8 +42,8 @@ const Blog = ({ data }: Props) => {
               type="text"
               name="search-query"
               id="search-query"
-              placeholder="Search for a specific tag..."
-              className="block h-9 w-full rounded bg-white placeholder-gray-400 text-gray-500 appearance-none pl-10 focus:outline-none"
+              placeholder="Search tag..."
+              className="block h-9 w-full rounded bg-white placeholder-light-cyan text-cyan appearance-none pl-10 focus:outline-none"
             />
           </label>
 
