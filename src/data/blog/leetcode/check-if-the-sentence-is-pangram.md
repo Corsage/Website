@@ -1,5 +1,5 @@
 ---
-title: '1832. Check if the Sentence Is Pangram'
+title: '1832: Check if the Sentence Is Pangram'
 date: 2022-10-16
 tags: ['leetcode', 'array', 'easy']
 description: This is a custom description for SEO and Open Graph purposes. If it's not provided, it defaults to auto-generated excerpts of the page content.
@@ -21,7 +21,7 @@ Our solution works well due to the constraints of the question. But it got me th
 
 ### Time & Space Complexity
 
-The **time complexity** of this solution is `O(N)` because we need to check the entire input `string`, character by character.
+The **time complexity** of this solution is `O(n)` because we need to check the entire input `string`, character by character.
 
 The **space complexity** of this solution is `O(1)` because the input does not affect our space.
 

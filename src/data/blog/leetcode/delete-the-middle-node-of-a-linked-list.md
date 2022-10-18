@@ -19,7 +19,7 @@ We use two pointers, one `fast` and one `slow`. For every two steps the `fast` p
 
 ### Time & Space Complexity
 
-The **time complexity** of this solution is `O(N + N / 2)` because the fast pointer iterates through the entire LinkedList and then the slow pointer iterates through half (i.e. `N / 2`) of the LinkedList.
+The **time complexity** of this solution is `O(n + n/2)` because the fast pointer iterates through the entire list and then the slow pointer iterates through half (i.e. `n/2`) of the list.
 
 The **space complexity** of this solution is `O(1)` because the input does not affect our space.
 

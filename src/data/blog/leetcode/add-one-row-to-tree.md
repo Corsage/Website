@@ -22,9 +22,9 @@ This is a tree traversal technique where we go down a tree level-by-level. It us
 
 ### Time & Space Complexity
 
-The **time complexity** of this solution is `O(N)` because the `Queue` can go through all the nodes worst case.
+The **time complexity** of this solution is `O(n)` because the `Queue` can go through all the nodes worst case.
 
-The **space complexity** of this solution is `O(N)` because we use a `Queue` and worst case push all the nodes into it.
+The **space complexity** of this solution is `O(n)` because we use a `Queue` and worst case push all the nodes into it.
 
 ```cpp
 /**
