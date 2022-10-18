@@ -71,7 +71,6 @@ The **time complexity** of this solution is `O(n * m)` because we loop through `
 The **space complexity** of this solution is `O(n)` because the resultant `string` size is related to the input `n`.
 
 ```cpp
-
 class Solution {
 public:
 
