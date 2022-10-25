@@ -66,9 +66,9 @@ Fortunately, we can! However, this solution was definitely not intuitive and too
 
 We may consider the expected input as a series `1` to `n`. In mathematics, this is known as an **arithmetic sequence**. If we take the summation of the series the formula becomes `(n * (n + 1)) / 2`.
 
-Since the input given has a repeated number, we take the summation of that and subtract it against the _expected sum_. Then, we add the repeated integer to get the **missing** integer. `missing = expected_sum - sum + repeated`.
+Since the input given has a repeated number, we take the summation of that and subtract it against the _expected sum_. Then, we add the repeated integer (due to _double counting_ in the given sum) to get the **missing** integer. `missing = expected_sum - sum + repeated`.
 
-We can find the repeated number through a clever technique that involves modifying our input array. Recall that the array size `n` may only have integers `1` to `n`. We can use our thinking in the previous answer but on a rolling basis instead of doing it all at the end. By mapping `nums[i]` as an index to `nums` itself, and multiplying it by `-1`, we can find the repeated number.
+We can find the repeated number through a clever technique that involves modifying our input array. Recall that the array size `n` may only have integers `1` to `n`. Following a similar strategy with our first solution, we map `nums[i]` as the index to use in `nums`, i.e. `nums[nums[i] - 1]` (we subtract `1` to offset it as an array index). We can mark each index by multiplying it by `-1`. Hence, a repeated number would already have `nums[nums[i] - 1] < 0`.
 
 ### Second Solution
 
