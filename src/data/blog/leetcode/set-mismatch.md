@@ -27,7 +27,7 @@ We know that an array size `n` is suppose to have the integers `1` to `n`. We ca
 
 Using the initial thinking, we simply check which number has `2` and which number has `0` in the count.
 
-The **time complexity** of this solution is `O(n log n + 2n)` because we **sort** the input first which is `O(n log n)` and then iterate through the `n` size array once and then again with the `n` size array that we made.
+The **time complexity** of this solution is `O(2n)` because we iterate through the `n` size array once and then again with the `n` size array that we made.
 
 The **space complexity** of this solution is `O(n)` because we allocate space for an additional size `n` array that we use towards our solution.
 
