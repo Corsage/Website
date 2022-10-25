@@ -36,9 +36,7 @@ class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
         vector<int> res(2);
-
         vector<int> counts(nums.size() + 1, 0);
-        sort(nums.begin(), nums.end());
 
         for (int i = 0; i < nums.size(); i++) {
             counts[nums[i]]++;
