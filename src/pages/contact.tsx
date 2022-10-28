@@ -115,6 +115,10 @@ const Contact = () => {
                   Any and all feedback is appreciated.
                 </li>
 
+                <li className="font-mono">
+                  If your name is Pranav please don't contact me.
+                </li>
+
                 <li className="font-mono"></li>
               </ul>
             </div>
