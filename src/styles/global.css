@@ -226,6 +226,16 @@ body {
   color: #89d9c6;
 }
 
+.blog-post > a,
+.blog-post > p > a {
+  font-family: 'Inter', sans-serif;
+}
+
+.blog-post > a:hover,
+.blog-post > p > a:hover {
+  text-decoration: underline;
+}
+
 /** Home styles - used in { index.tsx }. */
 .home-logo:hover {
   animation: shake 0.5s;
