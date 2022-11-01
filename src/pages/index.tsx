@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import type { HeadFC } from 'gatsby';
 
+import SEO from '../components/seo';
+
 import Logo from '../assets/svg/logo.svg';
 
 const Home = () => {
@@ -89,5 +91,4 @@ const styles = {
 };
 
 export default Home;
-
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <SEO title="Home" />;

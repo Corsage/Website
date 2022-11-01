@@ -1,7 +1,10 @@
 import React from 'react';
+import { HeadFC } from 'gatsby';
 
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { useDispatch } from 'react-redux';
+
+import SEO from '../components/seo';
 
 import { add } from '../redux/slices/notificationSlice';
 
@@ -114,12 +117,6 @@ const Contact = () => {
                 <li className="font-mono">
                   Any and all feedback is appreciated.
                 </li>
-
-                <li className="font-mono">
-                  If your name is Pranav please don't contact me.
-                </li>
-
-                <li className="font-mono"></li>
               </ul>
             </div>
           </div>
@@ -175,3 +172,4 @@ const Contact = () => {
 };
 
 export default Contact;
+export const Head: HeadFC = () => <SEO title="Contact" />;

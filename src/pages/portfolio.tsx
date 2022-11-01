@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import SEO from '../components/seo';
 import Experience from '../models/experience';
 import Project from '../models/project';
 
 import ExperienceItem from '../components/portfolio/experience-item';
 import ProjectItem from '../components/portfolio/project-item';
 
-import useExperiences from '../hooks/useExperiences';
-import useProjects from '../hooks/useProjects';
+import useExperiences from '../hooks/use-experiences';
+import useProjects from '../hooks/use-projects';
 
 const Portfolio = () => {
   const [emojiIndex, setEmojiIndex] = useState(0);
@@ -245,4 +246,4 @@ const styles = {
 };
 
 export default Portfolio;
-export const Head: HeadFC = () => <title>Portfolio</title>;
+export const Head: HeadFC = () => <SEO title="Portfolio" />;
