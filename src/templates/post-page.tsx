@@ -1,15 +1,21 @@
 import React from 'react';
-import { graphql, Link, StaticQueryDocument } from 'gatsby';
-import PostItem from '../components/blog/post-item';
-import BlogPost from '../models/blog-post';
+import { graphql, HeadFC, HeadProps, Link, PageProps } from 'gatsby';
 
-interface Props {
-  data: StaticQueryDocument;
-}
+import SEO from '../components/seo';
 
-const PostPage = ({ data }: Props) => {
-  const { post } = data;
+type DataProps = {
+  post: {
+    html: string;
+    frontmatter: {
+      title: string;
+      description: string;
+      tags: string[];
+      date: string;
+    };
+  };
+};
 
+const PostPage = ({ data: { post } }: PageProps<DataProps>) => {
   return (
     <div className="flex flex-col w-full my-10 mx-6 sm:mx-0 items-center">
       <div className="flex w-full items-center">
@@ -80,3 +86,6 @@ export const pageQuery = graphql`
 `;
 
 export default PostPage;
+export const Head: HeadFC<DataProps> = (props: HeadProps<DataProps>) => (
+  <SEO title={props.data.post.frontmatter.title} />
+);

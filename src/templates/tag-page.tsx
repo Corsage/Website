@@ -1,17 +1,36 @@
 import React from 'react';
-import { graphql, StaticQueryDocument } from 'gatsby';
+import { graphql, HeadFC, HeadProps, PageProps } from 'gatsby';
+
+import SEO from '../components/seo';
+
 import PostItem from '../components/blog/post-item';
 import BlogPost from '../models/blog-post';
 
-interface Props {
-  pageContext: { tag: string };
-  data: StaticQueryDocument;
-}
+type DataProps = {
+  posts: {
+    totalCount: number;
+    nodes: {
+      id: string;
+      excerpt: string;
+      timeToRead: number;
+      frontmatter: {
+        title: string;
+        description: string;
+        tags: string[];
+        date: string;
+      };
+    }[];
+  };
+};
 
-const TagPage = ({ pageContext, data }: Props) => {
-  const { tag } = pageContext;
-  const { posts } = data;
+type PageContextProps = {
+  tag: string;
+};
 
+const TagPage = ({
+  data: { posts },
+  pageContext: { tag }
+}: PageProps<DataProps, PageContextProps>) => {
   return (
     <div className="w-full my-10">
       <div className="text-center text-white my-10">
@@ -21,7 +40,7 @@ const TagPage = ({ pageContext, data }: Props) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-6 my-10">
-        {posts.nodes.map((node: any) => {
+        {posts.nodes.map((node) => {
           const post: BlogPost = {
             id: node.id,
             title: node.frontmatter.title,
@@ -61,3 +80,6 @@ export const pageQuery = graphql`
 `;
 
 export default TagPage;
+export const Head: HeadFC<DataProps, PageContextProps> = (
+  props: HeadProps<DataProps, PageContextProps>
+) => <SEO title={`tagged "${props.pageContext.tag}"`} />;

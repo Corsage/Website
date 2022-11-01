@@ -1,15 +1,28 @@
 import React from 'react';
-import { graphql, Link, StaticQueryDocument } from 'gatsby';
+import { graphql, HeadFC, Link, PageProps } from 'gatsby';
+
+import SEO from '../../components/seo';
+
 import PostItem from '../../components/blog/post-item';
 import BlogPost from '../../models/blog-post';
 
-interface Props {
-  data: StaticQueryDocument;
-}
+type DataProps = {
+  posts: {
+    nodes: {
+      id: string;
+      excerpt: string;
+      timeToRead: number;
+      frontmatter: {
+        title: string;
+        description: string;
+        tags: string[];
+        date: string;
+      };
+    }[];
+  };
+};
 
-const Blog = ({ data }: Props) => {
-  const posts = data.posts.nodes;
-
+const Blog = ({ data: { posts } }: PageProps<DataProps>) => {
   return (
     <div className="w-full my-10 mx-6 sm:mx-0">
       <div className="flex flex-col items-center justify-center gap-3 text-white my-10">
@@ -66,8 +79,8 @@ const Blog = ({ data }: Props) => {
           </h2>
           <span className="h-0.5 flex-1 ml-6 bg-white" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-6">
-          {posts.map((node: any) => {
+        <div className="re;a columns-1 md:columns-2 lg:columns-3 gap-6">
+          {posts.nodes.map((node) => {
             const post: BlogPost = {
               id: node.id,
               title: node.frontmatter.title,
@@ -106,3 +119,4 @@ export const pageQuery = graphql`
 `;
 
 export default Blog;
+export const Head: HeadFC = () => <SEO title="Blog" />;
