@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Notification from '../models/notification';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+
+import Notification from '../models/notification';
 import Toast from './toast';
 
 const Notifications = () => {

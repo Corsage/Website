@@ -46,14 +46,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex flex-col w-full items-center text-white">
-      <div className="flex self-start absolute">
+    <div className="w-full my-10 mx-6 sm:mx-0">
+      <div className="hidden lg:flex self-start absolute">
         <span className="w-0.5 h-40 bg-accent" />
         <span className="w-40 h-0.5 bg-accent" />
       </div>
 
-      <div className="flex self-start items-center ml-10 my-10 text-white">
-        <div className="relative flex items-center justify-center text-cyan hover:text-light-cyan">
+      <div className="flex flex-col lg:flex-row lg:self-start lg:items-center lg:ml-10 text-white bg-black">
+        <div className="relative flex items-center justify-center text-cyan hover:text-light-cyan bg-white">
           <StaticImage
             height={375}
             aspectRatio={1 / 1}
@@ -64,7 +64,7 @@ const Portfolio = () => {
           />
         </div>
 
-        <span className="w-60 h-0.5 -ml-10 mt-4 bg-white z-10" />
+        <span className="hidden lg:block w-60 h-0.5 -ml-10 mt-4 bg-white z-10" />
 
         <div className="flex ml-6">
           <div className="flex flex-col ml-6 gap-3">
@@ -97,7 +97,7 @@ const Portfolio = () => {
             </div>
 
             <div
-              style={{ width: 520, height: 140 }}
+              style={{ maxWidth: 520, minHeight: 140 }}
               className="flex flex-col whitespace-pre-line mb-3 justify-center"
             >
               {aboutIndex === 0 && (
