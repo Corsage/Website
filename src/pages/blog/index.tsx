@@ -79,7 +79,7 @@ const Blog = ({ data: { posts } }: PageProps<DataProps>) => {
           </h2>
           <span className="h-0.5 flex-1 ml-6 bg-white" />
         </div>
-        <div className="re;a columns-1 md:columns-2 lg:columns-3 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           {posts.nodes.map((node) => {
             const post: BlogPost = {
               id: node.id,
