@@ -63,7 +63,6 @@ const CommentModal = ({ id, title, show, close }: Props) => {
                     pageUrl: window.location.href,
                     theme: 'dark'
                   }}
-                  style={{ backgroundColor: 'transparent' }}
                 />
               </div>
             </div>
