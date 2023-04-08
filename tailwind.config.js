@@ -21,7 +21,8 @@ module.exports = {
         cyan: '#668B89',
         'light-cyan': '#9DADAC',
         'medium-cyan': '#1b3a37',
-        'dark-cyan': '#334D4B'
+        'dark-cyan': '#334D4B',
+        cusdis: '#1c1b22'
       }
     }
   },
