@@ -32,6 +32,31 @@ const TagPage = ({
   pageContext: { tag }
 }: PageProps<DataProps, PageContextProps>) => {
   return (
+    <div className="w-full my-10 mx-6 sm:mx-0">
+      <div className="flex flex-col my-10 gap-12">
+        <div className="flex w-full justify-center">
+          <h2 className="text-4xl font-semibold uppercase text-white text-center">
+            {posts.totalCount} post(s) tagged "{tag}"
+          </h2>
+        </div>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+          {posts.nodes.map((node) => {
+            const post: BlogPost = {
+              id: node.id,
+              title: node.frontmatter.title,
+              tags: node.frontmatter.tags,
+              date: node.frontmatter.date,
+              excerpt: node.excerpt,
+              timeToRead: node.timeToRead
+            };
+
+            return <PostItem key={`blog-post-${post.id}`} post={post} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+  return (
     <div className="w-full my-10">
       <div className="text-center text-white my-10">
         <h1 className="text-4xl font-semibold uppercase tracking-widest">
