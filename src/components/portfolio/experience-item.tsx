@@ -12,7 +12,7 @@ const ExperienceItem = ({ experience }: Props) => {
   return (
     <div className="container flex flex-col gap-3">
       <div className="flex w-full justify-between font-mono">
-        <h3 className="text-2xl uppercase">{experience.title}</h3>
+        <h3 className="text-2xl uppercase text-white">{experience.title}</h3>
         <h3 className="text-2xl text-cyan uppercase">{experience.company}</h3>
       </div>
 

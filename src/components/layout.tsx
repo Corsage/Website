@@ -45,17 +45,12 @@ const Layout = ({ children, location }: PageProps) => {
       </main>
       <Footer />
 
-      {waves &&
-        (location.pathname === '/' ||
-          location.pathname.includes('contact') ||
-          location.pathname.includes('blog')) && (
-          <div
-            style={styles.wavesContainer}
-            className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
-          >
-            <Waves />
-          </div>
-        )}
+      <div
+        style={styles.wavesContainer}
+        className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
+      >
+        <Waves />
+      </div>
     </div>
   );
 };
