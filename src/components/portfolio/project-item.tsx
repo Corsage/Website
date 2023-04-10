@@ -11,7 +11,7 @@ const ProjectItem = ({ project }: Props) => {
   return (
     <div
       style={{ width: 350 }}
-      className="bg-dark-cyan rounded-lg shadow-md hover:shadow-2xl"
+      className="flex flex-col bg-dark-cyan rounded-lg shadow-lg hover:shadow-2xl h-full"
     >
       <div
         style={{ height: 200 }}
@@ -30,14 +30,14 @@ const ProjectItem = ({ project }: Props) => {
         </OutboundLink>
       </div>
 
-      <div className="flex flex-col p-5 gap-3">
+      <div className="flex flex-col p-5 gap-3 flex-1">
         <h4 className="text-xl font-mono tracking-tight text-white uppercase">
           {project.title}
         </h4>
 
         <p className="font-normal text-light-cyan">{project.description}</p>
 
-        <ul className="flex flex-row flex-wrap gap-3">
+        <ul className="flex flex-row flex-wrap gap-3 mt-auto">
           {project.skills.map((skill, index) => {
             return (
               <li

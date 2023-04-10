@@ -233,7 +233,7 @@ const Portfolio = () => {
           </h2>
         </div>
 
-        <ol className="flex flex-row flex-wrap mt-6 gap-3 justify-center">
+        <ol className="flex flex-row flex-wrap mt-6 gap-6 justify-center">
           {projects.map(({ node }: { node: Project }, index: number) => {
             return (
               <li key={`project-${index}`}>
@@ -245,13 +245,6 @@ const Portfolio = () => {
       </div>
     </div>
   );
-};
-
-const styles = {
-  company: {
-    width: 60,
-    height: 60
-  }
 };
 
 export default Portfolio;
