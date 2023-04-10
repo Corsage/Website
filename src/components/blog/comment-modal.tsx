@@ -29,8 +29,8 @@ const CommentModal = ({ id, title, show, close }: Props) => {
             className="relative rounded-lg mx-auto"
           >
             <div
-              style={{ minHeight: 600, maxWidth: 800 }}
-              className="relative flex p-6 bg-cusdis rounded-lg"
+              style={{ height: 600, maxWidth: 800, colorScheme: 'dark' }}
+              className="relative flex p-6 bg-cusdis rounded-lg overflow-y-auto"
             >
               <button
                 type="button"
@@ -53,7 +53,7 @@ const CommentModal = ({ id, title, show, close }: Props) => {
                 </svg>
                 <span className="sr-only">Close modal</span>
               </button>
-              <div className="relative flex-1">
+              <div className="relative flex-1 mt-6">
                 <ReactCusdis
                   attrs={{
                     host: 'https://cusdis.com',
@@ -62,6 +62,9 @@ const CommentModal = ({ id, title, show, close }: Props) => {
                     pageTitle: title,
                     pageUrl: window.location.href,
                     theme: 'dark'
+                  }}
+                  style={{
+                    paddingBottom: '30px'
                   }}
                 />
               </div>
