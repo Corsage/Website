@@ -39,7 +39,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
+        plugins: ['gatsby-remark-prismjs-copy-button',
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

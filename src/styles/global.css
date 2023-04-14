@@ -236,6 +236,19 @@ body {
   text-decoration: underline;
 }
 
+.gatsby-remark-prismjs-copy-button {
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  color: #9DADAC;
+  background: none !important;
+  font-family: 'Fira Code', monospace;
+}
+
+.gatsby-remark-prismjs-copy-button:hover {
+  color: #89D9C6;
+}
+
 /** Home styles - used in { index.tsx }. */
 .home-logo:hover {
   animation: shake 0.5s;

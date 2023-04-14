@@ -5413,6 +5413,11 @@ gatsby-react-router-scroll@^5.22.0:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
+gatsby-remark-prismjs-copy-button@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs-copy-button/-/gatsby-remark-prismjs-copy-button-0.3.1.tgz#5d772d64b4fce0bee417c7ea7fe39b5a34403d62"
+  integrity sha512-/A3BuZSdmI62+uSitAbgqdoS3QtYX4kiz9DZZgc1qMqpPss07YTmU8dFuVNxnNDP13h9jAMfr3BxP7J60ATZSg==
+
 gatsby-remark-prismjs@^6.24.0:
   version "6.24.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-6.24.0.tgz#728455be1986ae55f52563ad034bf9971bbcd976"
