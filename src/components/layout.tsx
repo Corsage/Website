@@ -45,12 +45,14 @@ const Layout = ({ children, location }: PageProps) => {
       </main>
       <Footer />
 
-      <div
-        style={styles.wavesContainer}
-        className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
-      >
-        <Waves />
-      </div>
+      {waves && (
+        <div
+          style={styles.wavesContainer}
+          className="absolute flex w-full bottom-0 -z-50 overflow-hidden"
+        >
+          <Waves />
+        </div>
+      )}
     </div>
   );
 };
