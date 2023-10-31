@@ -17,7 +17,7 @@ const Contact = () => {
   const dispatch = useDispatch();
 
   const discordLink = () => {
-    navigator.clipboard.writeText('Corsage#2886');
+    navigator.clipboard.writeText('Corsage');
     dispatch(
       add({
         title: 'Discord',
