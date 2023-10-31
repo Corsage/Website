@@ -43,7 +43,7 @@ pref[1] = pref[0] ^ arr[1]
 arr[1] = pref[0] ^ pref[1]
 ```
 
-3. Lastly, since we know that `xor` is **commutative** and **associative**.
+3. Lastly, since we know that `xor` is **commutative** and **associative**. Friendly reminder that `a ^ a = 0` **always**.
 ```
 pref[2] = arr[0] ^ arr[1] ^ arr[2]
 pref[2] = pref[0] ^ (pref[0] ^ pref[1]) ^ arr[2]
