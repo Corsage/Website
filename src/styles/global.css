@@ -249,6 +249,48 @@ body {
   color: #89D9C6;
 }
 
+.blog-post > table {
+  border: 2px solid #e0e0e0;
+  width: 75%;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 640px) {
+  .blog-post > table {
+    width: 100%;
+  }
+}
+
+.blog-post > table > thead {
+  border: 2px solid #e0e0e0;
+}
+
+.blog-post > table td {
+  text-align: center;
+  padding: 4px;
+}
+
+.blog-post > table > tbody {
+  border: 2px solid #e0e0e0;
+}
+
+.blog-post > table > tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid #9DADAC;
+}
+
+.blog-post > table > tbody > tr > td:not(:last-child) {
+  border-right: 1px solid #9DADAC;
+}
+
+.blog-post ol {
+  list-style-type: decimal;
+  padding: 0rem 1rem;
+}
+
+.blog-post ol li::marker {
+  font-weight: bold;
+}
+
 /** Home styles - used in { index.tsx }. */
 .home-logo:hover {
   animation: shake 0.5s;
