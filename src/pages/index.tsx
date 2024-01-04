@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import type { HeadFC } from 'gatsby';
+import { navigate, type HeadFC } from 'gatsby';
 
 import SEO from '../components/seo';
 
 import Logo from '../assets/svg/logo.svg';
+import Autocomplete from '../components/autocomplete';
 
 const Home = () => {
   const query = useRef<HTMLInputElement>(null);
 
-  const suggestions = ['portfolio', 'contact', 'projects', 'test'];
+  const suggestions = ['portfolio', 'contact', 'blog'];
 
   const playSuggestions = async () => {
     for (let i = 0; i < suggestions.length; i++) {
@@ -64,13 +65,13 @@ const Home = () => {
           />
         </svg>
 
-        <input
+        <Autocomplete
           ref={query}
-          type="text"
-          name="search-query"
-          id="search-query"
           placeholder=""
-          className="block h-9 w-full rounded bg-white placeholder-gray-400 text-gray-500 appearance-none pl-10 focus:outline-none"
+          items={suggestions}
+          onClick={(topic) => {
+            navigate(`/${topic}`);
+          }}
         />
       </label>
     </div>
