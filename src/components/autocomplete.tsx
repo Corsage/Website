@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef, useState } from 'react';
+import React, { ChangeEvent, Ref, forwardRef, useRef, useState } from 'react';
 
 type Item = {
   label: string;
@@ -11,7 +11,10 @@ interface Props {
   placeholder?: string;
 }
 
-const Autocomplete = ({ items, placeholder, onClick }: Props) => {
+const Autocomplete: React.ForwardRefRenderFunction<HTMLInputElement, Props> = (
+  { items, placeholder, onClick }: Props,
+  ref: Ref<HTMLInputElement>
+) => {
   const allItems: Array<Item> = [];
   const [filteredItems, setFilteredItems] = useState<Array<Item>>([]);
   const suggestionRef = useRef<HTMLDivElement | null>(null);
@@ -58,12 +61,13 @@ const Autocomplete = ({ items, placeholder, onClick }: Props) => {
   };
 
   return (
-    <div>
+    <>
       <div>
         <input
           type="text"
           name="search-query"
           id="search-query"
+          ref={ref}
           placeholder={placeholder}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
@@ -89,7 +93,7 @@ const Autocomplete = ({ items, placeholder, onClick }: Props) => {
           })}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
@@ -99,4 +103,4 @@ const styles = {
   }
 };
 
-export default Autocomplete;
+export default forwardRef(Autocomplete);
