@@ -1,10 +1,11 @@
-import React from 'react';
-import { graphql, HeadFC, Link, PageProps } from 'gatsby';
+import React, { useEffect } from 'react';
+import { graphql, HeadFC, Link, PageProps, navigate } from 'gatsby';
 
 import SEO from '../../components/seo';
 
 import PostItem from '../../components/blog/post-item';
 import BlogPost from '../../models/blog-post';
+import Autocomplete from '../../components/autocomplete';
 
 type DataProps = {
   posts: {
@@ -23,6 +24,17 @@ type DataProps = {
 };
 
 const Blog = ({ data: { posts } }: PageProps<DataProps>) => {
+  const tags: Set<string> = new Set();
+
+  useEffect(() => {
+    // Populate all tags into a set to be used by autocomplete.
+    posts.nodes.forEach((node) => {
+      node.frontmatter.tags.forEach((tag) => {
+        tags.add(tag);
+      });
+    });
+  });
+
   return (
     <div className="w-full my-10 mx-6 sm:mx-0">
       <div className="flex flex-col items-center justify-center gap-3 text-white my-10">
@@ -51,12 +63,12 @@ const Blog = ({ data: { posts } }: PageProps<DataProps>) => {
               />
             </svg>
 
-            <input
-              type="text"
-              name="search-query"
-              id="search-query"
-              placeholder="Search tag..."
-              className="block h-9 w-full rounded bg-white placeholder-light-cyan text-cyan appearance-none pl-10 focus:outline-none"
+            <Autocomplete
+              placeholder="Search tags..."
+              items={tags}
+              onClick={(tag) => {
+                navigate(`/blog/tags/${tag}`);
+              }}
             />
           </label>
 
