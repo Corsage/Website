@@ -113,6 +113,7 @@ const Blog = ({ data: { posts } }: PageProps<DataProps>) => {
 export const pageQuery = graphql`
   query {
     posts: allMarkdownRemark(
+      limit: 9,
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       nodes {
